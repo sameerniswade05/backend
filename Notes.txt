@@ -1,0 +1,7 @@
+DB : MongoDB Atlas
+
+DB Access -> create account and give give read and write access get user id and passsword
+
+Network Access -> create ip 0.0.0.0/0 to give all user access or give specific backend machine address/ip
+
+backend to DB Connect -> need string and add password to string
