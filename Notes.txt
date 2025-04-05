@@ -26,3 +26,12 @@ Note : used app.on("error", (error)=>{}) to listen error , not rely catch block
 
 
 ////////////// app.js
+create app from express
+app.use used middleware to do cors setting give it frontend origin
+app.use for getting data in the form of json , parameter , store staic data in public
+app.use cookieParser to do curd operation on cookieParser
+
+
+
+
+//////////////////utils

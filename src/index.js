@@ -8,14 +8,17 @@ dotenv.config({
 });
 
 //second Step : connect DB and make server
-connectDB()
+connectDB() //return promise
   .then(() => {
+    //so we can used then
     try {
       const server = app.listen(process.env.PORT || 8000, () => {
+        // server start here
         console.log("App is listing on PORT::", process.env.PORT);
       });
 
       server.on("error", (error) => {
+        // Needed for asynchronous error handling
         console.error("ERROR: Server error:", error);
       });
     } catch (error) {
