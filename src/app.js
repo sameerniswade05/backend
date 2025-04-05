@@ -15,4 +15,11 @@ app.use(express.urlencoded({ extended: true, limit: "16kb" })); // to get data i
 app.use(express.static("public")); // to put all the static data like image or any row things put into the public folder
 app.use(cookieParser()); // to do curd operation on the cookies
 
+//Routes
+
+import userRouter from "./routes/user.routes.js";
+
+//route declartion
+app.use("/api/v1/users", userRouter);
+
 export default app;
