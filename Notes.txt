@@ -1,7 +1,28 @@
-DB : MongoDB Atlas
+////////////////DB : MongoDB Atlas
 
 DB Access -> create account and give give read and write access get user id and passsword
 
 Network Access -> create ip 0.0.0.0/0 to give all user access or give specific backend machine address/ip
 
 backend to DB Connect -> need string and add password to string
+
+put all the db connection in one file and calling it from main index.js file
+
+
+
+
+////////////// Index.js
+
+add .env data to index.js using dotenv import and config it
+make db connections
+this db connection make return promise
+used this promise as truth to make server / make express app
+put code of express in app.js -> return app -> import in index.js -> make app.listen
+
+Note : used app.on("error", (error)=>{}) to listen error , not rely catch block
+       because it does not handle asynchronous error like port already in used etc
+
+
+
+
+////////////// app.js
