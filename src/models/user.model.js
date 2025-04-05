@@ -77,6 +77,7 @@ userSchema.methods.generateAccessToken = function () {
     }
   );
 };
+
 userSchema.methods.generateRefreshToken = function () {
   return jwt.sign(
     {
@@ -88,4 +89,5 @@ userSchema.methods.generateRefreshToken = function () {
     }
   );
 };
+
 export const User = mongoose.model("User", userSchema);
