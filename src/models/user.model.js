@@ -42,7 +42,7 @@ const userSchema = new Schema(
       required: [true, "Password is required"],
     },
     refreshToken: {
-      type: string,
+      type: String,
     },
   },
   {
@@ -54,7 +54,7 @@ userSchema.pre("save", async function (next) {
   // its a middleware that work before save the data this function is used to save encrypted password
   if (this.isModified("password")) {
     //to check the password is modified or not //HW
-    this.password = bcrypt.hash(this.password, 10); //encrypting the password
+    this.password = await bcrypt.hash(this.password, 10); //encrypting the password
   }
   next();
 });
